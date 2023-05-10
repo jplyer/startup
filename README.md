@@ -23,14 +23,6 @@ Websocket- Gather statuses from online users and share them to others on the sit
 
 React- Application ported to use the React web framework.
 
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
-  <img alt="Shows a Mockup of my main page for Jacks Blog Tools." src="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
-  
-  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
-  <img alt="Shows a Mockup of the config page for Jacks Blog Tools." src="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
-  
-  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
-  <img alt="Shows a Mockup of the config page for Jacks Blog Tools." src="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
-  
-</picture>
+![A mockup of my main page for Jacks Blog Tools](Startuppage1.jpg)
+![A mockup of the config page for Jacks Blog Tools](https://github.com/jplyer/startup/blob/9b0d0beabc037a8554ac3ff28ca2f1440d941acf/startup%20page%202.jpg)
+![A mockup of the Backend for Jacks blog Tools](https://github.com/jplyer/startup/blob/9b0d0beabc037a8554ac3ff28ca2f1440d941acf/startup%20backend.jpg)
