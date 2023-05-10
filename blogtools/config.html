@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack's Blog Tools - Config</title>
+  </head>
+
+  <body>
+   <h1>Config</h1>
+
+<h3>Stored Images</h3>
+
+<form action="formSubmit.html" method="post">
+    <fieldset>
+        <legend>Select an Image to display!</legend>
+
+        <label for="image1" name="image1">
+            <img alt="placeholder penguin" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/875.png" width="100" height="100">
+        </label>
+        <input type="radio" id="image1" name="varRadio" value="image1" checked />
+
+        <label for="image2" name="image2">
+            <img alt="funny aple pie dinosaur" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/842.png" width="100" height="100">
+        </label>
+        <input type="radio" id="image2" name="varRadio" value="image2" checked />
+
+    
+        <label for="file">Upload new Image: </label>
+        <input type="file" id="file" name="varFile" accept="image/*" multiple /> 
+
+
+      </fieldset>
+</form>
+
+  </body>
+  
+</html>
