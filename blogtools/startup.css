@@ -1,8 +1,37 @@
 * {
     font-family: sans-serif;
     box-sizing: border-box;
+    color:white;
   }
 
   header { 
-    font-size: 90px;
+    font-size: 50px;
+    background-color: cyan;
+    color: white;
+    border-radius: 5px;
+    padding: .4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+
   }
+
+  body {
+    background-color: burlywood;
+    
+  }
+footer {
+
+        flex: 0 50px;
+        background: cyan;
+        color: white;
+        border-radius: 5px;
+      
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+      
+}
