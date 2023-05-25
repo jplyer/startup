@@ -17,19 +17,33 @@
     background-color: burlywood;
     
   }
-footer {
+ 
+  /* Image Display Controls */
+  .displaycontrol {
+    position: absolute;
+    background-color: greenyellow;
+    padding: .3em;
+    border: 5px solid red;
 
-        flex: 0 50px;
-        background: cyan;
-        color: white;
-        border-radius: 5px;
-      
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+  }
+  .displayheader {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .displaytext {
+    font-size: 18px;
+  }
+  .displayimage {
+    flex-shrink: 0;
+    max-width: 200px;
+    max-height: 200px;
     
-}
+  }
 
 .foottext {
   padding: .2em;
@@ -42,6 +56,7 @@ footer {
   right: 0;
   top: 120px;
   background-color: yellowgreen;
+  border: 5px solid red;
 }
 .logintext {
   text-align: right;
@@ -54,7 +69,7 @@ footer {
 .statuscontrol {
  position: absolute;
  right: 0;
- top: 400px;
+ top: 300px;
  padding: 1em;
 }
 .stathead {
@@ -66,5 +81,18 @@ footer {
   font-size: 18px;
   text-align: right;
   padding-bottom: .25em;
+
+}
+
+footer {
+
+  background: cyan;
+  color: white;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
 }
