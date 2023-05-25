@@ -35,3 +35,23 @@ footer {
         font-size: 35px;
       
 }
+
+.statuscontrol {
+  position: absolute;
+  top: 145px;
+  right: 35px;
+
+ width: 300px;
+ border: .5em solid red;
+ background-color: yellowgreen;
+ padding: 1em;
+
+}
+.stathead {
+  font-size: 30px;
+  font-weight: bold;
+}
+.status {
+  font-size: 18px;
+
+}
