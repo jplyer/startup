@@ -6,14 +6,10 @@
 
   header { 
     font-size: 50px;
-    background-color: cyan;
     color: white;
-    border-radius: 5px;
-    padding: .4em;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: left;
+    padding-top: .3em;
+    padding-bottom: 1em;
+    text-align: center;
 
   }
 
@@ -34,15 +30,31 @@ footer {
         align-items: center;
     
 }
+
 .foottext {
   padding: .2em;
   font-size: 35px;
 }
 
+/*Controls for the login box*/
+.loginbox {
+  position: absolute;
+  right: 0;
+  top: 120px;
+  background-color: yellowgreen;
+}
+.logintext {
+  text-align: right;
+  font-size: 30px;
+}
+.loginbuttons{
+ display: ;
+}
+
 .statuscontrol {
  position: absolute;
  right: 0;
- top: 100px;
+ top: 400px;
  padding: 1em;
 }
 .stathead {
