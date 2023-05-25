@@ -32,26 +32,27 @@ footer {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        font-size: 35px;
-      
+    
+}
+.foottext {
+  padding: .2em;
+  font-size: 35px;
 }
 
 .statuscontrol {
-  position: absolute;
-  top: 145px;
-  right: 35px;
-
- width: 300px;
- border: .5em solid red;
- background-color: yellowgreen;
+ position: absolute;
+ right: 0;
+ top: 100px;
  padding: 1em;
-
 }
 .stathead {
   font-size: 30px;
   font-weight: bold;
+  padding-bottom: .35em;
 }
 .status {
   font-size: 18px;
+  text-align: right;
+  padding-bottom: .25em;
 
 }
