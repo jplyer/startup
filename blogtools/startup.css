@@ -25,10 +25,14 @@
     padding: .3em;
     border: 5px solid red;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
+    
+      display: flex;
+      flex-direction: column; /* Align child divs vertically */
+      justify-content: center; /* Center the child divs vertically */
+      align-items: center; /* Center the child divs horizontally */
+      height: 300px; /* Set the desired height for the parent container */
+    
+    
   }
   .displayheader {
     font-size: 30px;
@@ -39,7 +43,13 @@
     font-size: 18px;
   }
   .displayimage {
-    flex-shrink: 0;
+    display: flex;
+    flex-direction: row; /* Align child divs horizontally */
+    justify-content: center; /* Center the child divs horizontally */
+  }
+
+  .displayimage img {
+    
     max-width: 200px;
     max-height: 200px;
     
@@ -57,6 +67,11 @@
   top: 120px;
   background-color: yellowgreen;
   border: 5px solid red;
+
+  display: flex;
+      flex-direction: column; /* Align child divs vertically */
+      justify-content: center; /* Center the child divs vertically */
+      align-items: center; /* Center the child divs horizontally */
 }
 .logintext {
   text-align: right;
