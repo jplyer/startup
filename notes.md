@@ -13,7 +13,7 @@ and p will select paragrahs
 you can give them names to call specific ones in the html.
 Using divs in your html is very useful in order to target the desired text an example of divs and named divs looks like this
 HTML:
-<div class="none">None</div>
+<!-- <div class="none">None</div>
 <div class="block">Block</div>
 <div class="inline">Inline1</div>
 <div class="inline">Inline2</div>
@@ -28,7 +28,7 @@ HTML:
   <div>GridB</div>
   <div>GridC</div>
   <div>GridD</div>
-</div>
+</div> -->
 
 CSS:
 .none {
