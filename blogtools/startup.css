@@ -42,7 +42,7 @@
   .displaytext {
     font-size: 18px;
   }
-  .displayimage {
+  .displayimage span {
     display: flex;
     flex-direction: row; /* Align child divs horizontally */
     justify-content: center; /* Center the child divs horizontally */
