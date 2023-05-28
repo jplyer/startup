@@ -52,3 +52,13 @@ CSS:
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+
+Notes From Review:
+Subdomain formant would be like cs260.cs.byu.edu
+.com or edu is a tld
+DOM textContent sets the child text for an element (js)
+<div> stands for division
+Chmod +x deploy.sh makes a script executeable
+CNAME ia a DNS record that points to another DNS record
+CSS Structure is Margin, Border, Padding, Content.
