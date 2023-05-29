@@ -1,39 +1,43 @@
 * {
-    font-family: sans-serif;
+    font-family: rainyHearts;
     box-sizing: border-box;
     color:white;
   }
 
   header { 
     font-size: 50px;
-    color: white;
     padding-top: .3em;
-    padding-bottom: 1em;
+    padding-bottom: .3em;
+    margin-bottom: 1em;
     text-align: center;
 
   }
 
   body {
-    background-color: burlywood;
+   background-color: #deb887;
     
+   
+  }
+  .centerbox {
+   text-align: center;
+    background-color: #f0dac2;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+
+    padding: 10px;
+  }
+  .centerp {
+    font-size: 20px;
+    max-width:  45em;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  
   }
  
   /* Image Display Controls */
-  .displaycontrol {
-    position: absolute;
-    background-color: greenyellow;
-    padding: .3em;
-    border: 5px solid red;
 
-    
-      display: flex;
-      flex-direction: column; /* Align child divs vertically */
-      justify-content: center; /* Center the child divs vertically */
-      align-items: center; /* Center the child divs horizontally */
-      height: 300px; /* Set the desired height for the parent container */
-    
-    
-  }
   .displayheader {
     font-size: 30px;
     font-weight: bold;
@@ -41,17 +45,24 @@
   }
   .displaytext {
     font-size: 18px;
-  }
-  .displayimage span {
     display: flex;
-    flex-direction: row; /* Align child divs horizontally */
-    justify-content: center; /* Center the child divs horizontally */
+    justify-content: center;
+  }
+  .displaytext span {
+    padding: 1em;
+  }
+
+  .displayimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .displayimage img {
     
     max-width: 200px;
     max-height: 200px;
+
     
   }
 
@@ -60,26 +71,42 @@
   font-size: 35px;
 }
 
+/* Styling for Songlist*/
+
+.listhead {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.songs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+ 
+}
+
 /*Controls for the login box*/
 .loginbox {
-  position: absolute;
-  right: 0;
-  top: 120px;
-  background-color: yellowgreen;
-  border: 5px solid red;
+  text-align: center;
+    background-color: chartreuse;
+    border: red solid 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
 
-  display: flex;
-      flex-direction: column; /* Align child divs vertically */
-      justify-content: center; /* Center the child divs vertically */
-      align-items: center; /* Center the child divs horizontally */
+    padding: 10px;
 }
 .logintext {
-  text-align: right;
+  text-align: center;
   font-size: 30px;
 }
 /* .loginbuttons{
  display: ;
 } */
+
 
 .statuscontrol {
  position: absolute;
@@ -110,4 +137,9 @@ footer {
   justify-content: center;
   align-items: center;
 
+}
+
+@font-face {
+  font-family: rainyHearts;
+  src: url(rainyhearts.ttf);
 }
