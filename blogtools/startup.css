@@ -1,77 +1,100 @@
 * {
-    font-family: rainyHearts;
-    box-sizing: border-box;
-    color:white;
-  }
+  font-family: rainyHearts;
+  box-sizing: border-box;
+  color: white;
+}
 
-  header { 
-    font-size: 50px;
-    padding-top: .3em;
-    padding-bottom: .3em;
-    margin-bottom: 1em;
-    text-align: center;
+@font-face {
+  font-family: rainyHearts;
+  src: url(rainyhearts.ttf);
+}
 
-  }
+header {
+  font-size: 50px;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  margin-bottom: .25em;
+  text-align: center;
+}
 
-  body {
-   background-color: #deb887;
-    
-   
-  }
-  .centerbox {
-   text-align: center;
-    background-color: #f0dac2;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
+body {
+  background-color: #deb887;
+}
 
-    padding: 10px;
-  }
-  .centerp {
-    font-size: 20px;
-    max-width:  45em;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-  
-  }
- 
-  /* Image Display Controls */
+.boxcontrol {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-  .displayheader {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-  }
-  .displaytext {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-  }
-  .displaytext span {
-    padding: 1em;
-  }
+.centerbox {
+  text-align: center;
+  background-color: #f0dac2;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 0px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 5px;
+}
 
-  .displayimage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.loginstatusbox {
+  text-align: center;
+  background-color: #f0dac2;
+  margin-left: -10px;
+  margin-right: auto;
+  margin-top: 130px;
+  width: fit-content;
+  border-radius: 5px;
+  padding: .4em;
+}
 
-  .displayimage img {
-    
-    max-width: 200px;
-    max-height: 200px;
+.centerp {
+  font-size: 20px;
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
 
-    
-  }
+/* Image Display Controls */
+
+.displayheader {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.displaytext {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.displaytext span {
+  padding: 1em;
+}
+
+.displayimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.displayimage img {
+  max-width: 200px;
+  max-height: 200px;
+}
 
 .foottext {
-  padding: .2em;
+  padding: 0.2em;
   font-size: 35px;
 }
 
-/* Styling for Songlist*/
+/* Styling for Songlist */
 
 .listhead {
   font-size: 30px;
@@ -85,61 +108,60 @@
   justify-content: center;
   align-items: center;
   text-align: left;
- 
 }
 
-/*Controls for the login box*/
+/* Controls for the login box */
 .loginbox {
   text-align: center;
-    background-color: chartreuse;
-    border: red solid 5px;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-
-    padding: 10px;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Added to stack elements vertically */
+  align-items: center; /* Added to center-align elements horizontally */
+  max-width: 300px;
 }
+
 .logintext {
   text-align: center;
   font-size: 30px;
 }
-/* .loginbuttons{
- display: ;
-} */
 
-
-.statuscontrol {
- position: absolute;
- right: 0;
- top: 300px;
- padding: 1em;
+.loginbuttons span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
 }
-.stathead {
+
+.loginbuttons text {
+  font-size: 18px;
+}
+
+
+.statushead {
   font-size: 30px;
   font-weight: bold;
-  padding-bottom: .35em;
+  padding-bottom: 0.35em;
 }
+
 .status {
   font-size: 18px;
   text-align: right;
-  padding-bottom: .25em;
-
+  padding-bottom: 0.25em;
 }
 
 footer {
-
-  background: cyan;
-  color: white;
-  border-radius: 5px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
-@font-face {
-  font-family: rainyHearts;
-  src: url(rainyhearts.ttf);
-}
+
+
+
+
+
