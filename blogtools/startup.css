@@ -40,7 +40,7 @@ input[type="text"]::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}
+}=
 
 .centerbox {
   text-align: center;
@@ -167,6 +167,7 @@ input[type="text"]::placeholder {
   padding-bottom: 0.25em;
 }
 
+/* Styling Control for config.html */
 .configbox {
   text-align: center;
   background-color: #f0dac2;
