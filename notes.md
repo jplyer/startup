@@ -3,6 +3,7 @@
 ## HTML Notes
 
   HTML Cheatsheet
-  '''<header></header>'''
+  You can use the `<p>` tag to create paragraphs.
+
   You Arrange attributes this way and can add others inside to make your webstie functional.
   
