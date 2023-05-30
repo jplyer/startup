@@ -26,3 +26,18 @@ React- Application ported to use the React web framework.
 ![A mockup of my main page for Jacks Blog Tools](Startuppage1.jpg)
 ![A mockup of the config page for Jacks Blog Tools](https://github.com/jplyer/startup/blob/9b0d0beabc037a8554ac3ff28ca2f1440d941acf/startup%20page%202.jpg)
 ![A mockup of the Backend for Jacks blog Tools](https://github.com/jplyer/startup/blob/9b0d0beabc037a8554ac3ff28ca2f1440d941acf/startup%20backend.jpg)
+
+# HTML Deliverable
+* I wrote the bare bones structure for the site.
+* Including a Header, Footer, and some forms such as login.
+* I have two pages so far, index.html and Config.html.
+* index.html is the main bulk of the site and will be the landing page.
+* config.html is an example of what the config page will look like on someones own site when they download and implent the tools I'm making.
+
+# CSS Deliverable
+* I edited my HTML with divs and spans to make styling it more convenient.
+* I added style.css which currently applies to the entire startup subdomain.
+* I used CSS to style the website!
+* I added a custom font!
+* I added an Icon for the landing page!
+
