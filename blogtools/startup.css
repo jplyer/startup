@@ -40,7 +40,7 @@ input[type="text"]::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}=
+}
 
 .centerbox {
   text-align: center;
