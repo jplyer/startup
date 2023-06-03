@@ -41,3 +41,12 @@ React- Application ported to use the React web framework.
 * I added a custom font!
 * I added an Icon for the landing page!
 
+# JS Deliverable
+* Edited HTML to add script functionality.
+* Added New CSS pages for styling. Some are unused.
+* Added new HTML pages I will make if I have spare time.
+* Added login placeholder js file.
+* Added status update js file. Mostly placeholder as I want to grab statuses from other users.
+* Added song list updater. Also placeholder as I'll be using node.js to update the main page from the config page.
+
+
