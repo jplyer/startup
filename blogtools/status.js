@@ -3,14 +3,14 @@ let statuses = [];
 function statusClick() {
     var popup = document.getElementById("statusPopup");
     popup.classList.toggle("show");
+    loadStatus();
 }
 
-var statusButton = document.getElementById("statusButton");
-statusButton.addEventListener("click", statusClick);
+
 
 function loadStatus() {
     
-    let username = getUser();
+    // let username = getUser();
 
     let input = prompt("Enter your Status!")
 
@@ -21,5 +21,6 @@ function loadStatus() {
     statuses.push(userStatus);
 }
 
-loadStatus();
+var statusButton = document.getElementById("statusButton");
+statusButton.addEventListener("click", statusClick);
 
