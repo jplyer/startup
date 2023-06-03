@@ -17,7 +17,7 @@
     <div class="configbox">
       <h3>Stored Images</h3>
 
-<form action="formSubmit.html" method="post">
+
     <fieldset>
         <legend>Select an Image to display!</legend>
 
@@ -38,17 +38,16 @@
       </fieldset>
       <h3>Add a Song to your list</h3>
 <label for="text">Add song: </label>
-        <input type="text" id="text" name="varText" placeholder="Song Name - Band" />
+        <input type="text" id="songNameEntry" name="varText" placeholder="Song Name - Band" />
 
         <label for="url">Song URL: </label>
-        <input type="url" id="url" name="varUrl" />
-<hr>
-        <button type="submit">Finalize Changes</button>
-</form>
+        <input type="url" id="songURLEntry" name="varUrl" placeholder="url goes here!"/>
+        <button type="submit" id="submitSong">add song!</button>
+
 
     </div>
 
 
   </body>
-  
+  <script src="songlist.js"></script>
 </html>

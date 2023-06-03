@@ -4,6 +4,7 @@
   font-family: rainyHearts;
   box-sizing: border-box;
   color: white;
+  text-shadow: black;
 }
 
 @font-face {
@@ -33,6 +34,19 @@ footer {
 input[type="text"]::placeholder {
   color: black;
 }
+
+input[type="text"] {
+  color: black;
+}
+
+input[type="url"]::placeholder {
+  color: black;
+}
+
+input[type="url"] {
+  color: black;
+}
+
 
 /* index.html styling*/
 .boxcontrol { /*contols how the two man divs "centerbox" & "loginstatusbox" interact*/
