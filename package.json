@@ -1,0 +1,15 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "I want to build some simple apps that can make customization of small indivdual programs websties easier. The plan is to make a way to update the site without having to edit anything for simple things like a top ten song list or a gif for what the weather is like. I would have to code avalible for download in templates for easy integration into anyones site. I would also like to add statuses for logged in users that will display on the main page when actively logged into the site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
