@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="startup.css" rel="stylesheet" />
+    <link href="statusentrypopup.css" rel="stylesheet"/>
+    <title>Jack's Blog Tools</title>
+    <link rel="icon" href="https://assets.pokemon.com/assets/cms2/img/pokedex/full/875.png">
+  </head>
+
+  <header>
+    <div class ="indextitle">This is how site config will work for you!(placeholder)</div>
+
+    <div class="sitenav">
+      <!--Placeholders-->
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="config.html">Config</a>
+      <a href="playground.html">Test the Tools!</a>
+
+    </div>
+  
+  </header>
+
+  <div class="boxcontrol">
+      <div class="centerbox">
+
+        <!--Display Control HTML-->
+        <div class="displayheader">Image Display Showcase</div>
+
+        <div class="displaytext">
+          <span>Funny Icecube Penguin</span>
+          <span>Funny Apple Pie Turtle</span>
+        </div>
+        
+        <div class="displayimage">
+          <span><img alt="placeholder penguin" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/875.png"/></span>
+          <span><img alt="apple pie turtle" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/842.png"/></span>
+        </div>
+<hr>
+         <!-- Songlist Control HTML -->
+        <div class="listhead">here are a few songs I like!</div>
+          <div class="songs"> 
+            <ul id="songList">
+              <li><a href="https://www.youtube.com/watch?v=5bCXzPyKqSc">I am a Microwave -The Inertia King</a></li>
+              <li><a href="https://sailship.bandcamp.com/track/american-moon">American Moon - Sailship</a></li>
+              <li><a href="https://twodoorcinemaclub.bandcamp.com/track/everybodys-cool">Everybody's Cool - Two Door Cinema Club</a></li>
+              <li><a href="https://www.youtube.com/watch?v=zO7UN2q3WjA">On the Wing - Owl City</a></li>
+            </ul>
+          </div>
+          <hr>
+
+            <!--Paragraph-->
+            <p class="centerp">This site is a demonstration of my blog tools! You can download or copy the code to use for your neocities site/blog!
+              It isn't finished yet so this is placeholder text. With the tools user can display stauses while they are on your site!
+              You would be able to conviently update your site from a web app/seperate config page on your phone that you would set personal access to!
+              That way you could update a gif based on your mood or the weather! or whatever your favorite songs of the week are!
+              You could also have a use config page that would let users change some things if you wanted. its up to you!
+            </p>
+        
+      </div>
+
+      <div class="loginstatusbox">
+        <!-- Login Box HTML -->
+        <div class="loginbox">
+        <div class="logintext">Login to Display status!</div>
+
+        <div class="loginbuttons"><form method="get" action="config.html">
+          <span><label for="username">Username: </label></span>
+          <span><input id="username" type="text" placeholder="Enter Username"></span>
+
+          <span><label for="password">Password: </label></span>
+          <span><input id="password" type="text" placeholder="Enter Password"></span>
+
+          <span><Button type="submit">Login</Button></span>
+        </form></div>
+        
+        
+
+        </div>
+        
+        <div class="statuscontrol">
+        <div class="statushead">Online User Statuses!</div>
+
+        <Button type="submit" id="statusButton">Add Your Status!</Button>
+
+        <div class="status"><span>Jack - I love this site!</span></div>
+        <div class="status"><span>Gekko - I hate this site!</span></div>
+
+        </div>
+
+
+      </div>
+  </div>
+  
+  
+  <div class="popup" id="statusPopup">
+    <input type="text" id="statusInput" placeholder="Status">
+    <button id="submitStatusButton">Submit</button>
+    
+  </div>
+  
+  <script src="status.js"></script>
+
+  <fieldset>
+    <legend>Select an Image to display!</legend>
+
+    <label for="image1" name="image1">
+        <img alt="placeholder penguin" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/875.png" width="100" height="100">
+    </label>
+    <input type="radio" id="image1" name="varRadio" value="image1" checked />
+
+    <label for="image2" name="image2">
+        <img alt="funny aple pie dinosaur" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/842.png" width="100" height="100">
+    </label>
+    <input type="radio" id="image2" name="varRadio" value="image2" checked />
+
+
+    <label for="file">Upload new Image: </label>
+    <input type="file" id="file" name="varFile" accept="image/*" multiple />
+
+  </fieldset>
+  <h3>Add a Song to your list</h3>
+<label for="text">Add song: </label>
+    <input type="text" id="songNameEntry" name="varText" placeholder="Song Name - Band" />
+
+    <label for="url">Song URL: </label>
+    <input type="url" id="songURLEntry" name="varUrl" placeholder="url goes here!"/>
+    <button type="submit" id="submitSong">add song!</button>
+
+
+</div>
+
+
+</body>
+<script src="songlist.js"></script>
+
+</html>
+
+<Footer>
+    <div class="foottext"><a href="https://github.com/jplyer/startup">My Github</a></div>
+    <div class="foottext"><a href="config.html">User Config</a></div>
+  </Footer>
