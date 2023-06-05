@@ -12,7 +12,12 @@
   src: url(rainyhearts.ttf);
 }
 
-header {
+.sitenav {
+  font-size: 30px;
+  text-align: center;
+}
+
+.indextitle {
   font-size: 50px;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
