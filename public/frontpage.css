@@ -1,0 +1,60 @@
+
+/* global code*/
+* {
+    font-family: rainyHearts;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: black;
+  }
+  
+  @font-face {
+    font-family: rainyHearts;
+    src: url(rainyhearts.ttf);
+  }
+  
+  .sitenav {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .indextitle {
+    font-size: 50px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-bottom: .25em;
+    text-align: center;
+  }
+  
+  body {
+    background-color: #deb887;
+  }
+
+  .news {
+    font-size: 20px;
+    max-width: 45em;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.newsbox {
+    max-width: 200px;
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    background-color: #f0dac2;
+    border-radius: 5px;
+    padding: .5em;
+}
+  
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .foottext {
+    padding: 0.2em;
+    font-size: 35px;
+  }
