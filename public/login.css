@@ -1,0 +1,88 @@
+* {
+    font-family: rainyHearts;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: black;
+  }
+  
+  @font-face {
+    font-family: rainyHearts;
+    src: url(rainyhearts.ttf);
+  }
+  .sitenav {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .indextitle {
+    font-size: 50px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-bottom: .25em;
+    text-align: center;
+  }
+  
+  body {
+    background-color: #deb887;
+  }
+
+  .main { /*contols how the two man divs "centerbox" & "loginstatusbox" interact*/
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .centerbox {
+    text-align: center;
+    background-color: #f0dac2;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 5px;
+  }
+
+  .loginbox {
+    background-color: #f0dac2;
+    width: 500px;
+    
+  }
+
+  input[type="text"]::placeholder {
+    color: black;
+  }
+  
+  input[type="text"] {
+    width: 200px;
+    height: 40px;
+    color: black;
+    padding: .5em;
+    padding-left: 7px;
+    font-size: 2vw;
+    margin: .35em;
+  }
+
+  button {
+    width: 80px;
+    height: 40px;
+    margin-top: 1em;
+    background-color: #f08080;
+    border-color: #db8686;
+    border-radius: 3px;
+  }
+  .button span {
+    width: fit-content;
+    text-align: center;
+  }
+  
+  .entrycontrol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  

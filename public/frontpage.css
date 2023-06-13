@@ -46,6 +46,14 @@
     border-radius: 5px;
     padding: .5em;
 }
+
+.loginbox {
+    
+    max-width: 200px;
+    background-color: #f0dac2;
+    border-radius: 5px;
+    padding: .5em;
+}
   
   footer {
     display: flex;

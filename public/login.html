@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+ 
+    <title>Login</title>
+    <link rel="icon" href="https://assets.pokemon.com/assets/cms2/img/pokedex/full/875.png">
+    <link href="login.css" rel="stylesheet">
+</head>
+
+  <div class="main">
+    <div class="centerbox">
+        <div class="loginbox">
+
+            <h1>Login:</h1>
+    
+            <div class="entrycontrol">
+                <input type="text" id="userName" placeholder="username!">
+                <input type="text" id="password" placeholder="password!">
+            </div>
+            <div class="buttoncontrol">
+                <button type="button" onclick="loginUser()"><span>Login</span></button>
+                <button type="button" onclick="createUser()"><span>Register</span></button>
+            </div>
+          </div>
+    </div>
+  </div>
+<script src="login.js"></script>
+  </html>
