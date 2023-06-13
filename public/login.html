@@ -10,6 +10,8 @@
     <title>Login</title>
     <link rel="icon" href="https://assets.pokemon.com/assets/cms2/img/pokedex/full/875.png">
     <link href="login.css" rel="stylesheet">
+    
+
 </head>
 
   <div class="main">
@@ -20,14 +22,21 @@
     
             <div class="entrycontrol">
                 <input type="text" id="userName" placeholder="username!">
-                <input type="text" id="password" placeholder="password!">
+                <input type="password" id="password" placeholder="password!">
             </div>
             <div class="buttoncontrol">
-                <button type="button" onclick="loginUser()"><span>Login</span></button>
-                <button type="button" onclick="createUser()"><span>Register</span></button>
+                <button type="button" class="btn-primary" onclick="loginUser()"><span>Login</span></button>
+                <button type="button" class="btn-primary" onclick="createUser()"><span>Register</span></button>
+                <button type="button" class="btn-secondary" onclick="logout()"><span>logout</span></button>
             </div>
           </div>
     </div>
   </div>
-<script src="login.js"></script>
+
+  <!-- Error dialog -->
+  <div class="errorbox" id="msgError" tabindex="-1">
+    <div class="errorMsg">Invalid User</div>
+    <button class="loginfailbut" class="btn-secondary">Close</button>
+  </div>
+<script src="/login.js"></script>
   </html>

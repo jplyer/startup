@@ -52,11 +52,11 @@
     
   }
 
-  input[type="text"]::placeholder {
+  input::placeholder {
     color: black;
   }
   
-  input[type="text"] {
+  input {
     width: 200px;
     height: 40px;
     color: black;
@@ -86,3 +86,6 @@
     justify-content: center;
   }
   
+ .errorbox {
+    display: none;
+ }
