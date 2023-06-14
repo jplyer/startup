@@ -6,6 +6,7 @@
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="frontpage.css" rel="stylesheet">
+    <link href="statusentrypopup.css" rel="stylesheet">
  
     <title>Jack's Blog Hosting</title>
     <link rel="icon" href="https://assets.pokemon.com/assets/cms2/img/pokedex/full/875.png">
@@ -50,6 +51,12 @@
 
       </div>
 
+      <div class="popup" id="statusPopup">
+        <input type="text" id="statusInput" placeholder="Status">
+        <button id="submitStatusButton">Submit</button>
+        
+      </div>
+
     <div class="newsbox">
       <h1>News!</h1>
       <p class="news">
@@ -62,4 +69,7 @@
     <Footer>
       <div class="foottext"><a href="https://github.com/jplyer/startup">My Github</a></div>
     </Footer>
+
+    <!-- scripts go here -->
+    <script src="status.js"></script>
 </html>

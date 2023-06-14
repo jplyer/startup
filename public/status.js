@@ -1,4 +1,4 @@
-let statuses = [];
+// let statuses = [];
 
 function statusClick() {
     var popup = document.getElementById("statusPopup");
@@ -8,19 +8,19 @@ function statusClick() {
 
 
 
-function loadStatus() {
+// function loadStatus() {
     
-    // let username = getUser();
+//     // let username = getUser();
 
-    let input = prompt("Enter your Status!")
+//     let input = prompt("Enter your Status!")
 
-    let userStatus = {
-        status: username + '-' + input
-    };
+//     let userStatus = {
+//         status: username + '-' + input
+//     };
 
-    statuses.push(userStatus);
-}
+//     statuses.push(userStatus);
+// }
 
-var statusButton = document.getElementById("statusButton");
-statusButton.addEventListener("click", statusClick);
+// var statusButton = document.getElementById("statusButton");
+// statusButton.addEventListener("click", statusClick);
 
