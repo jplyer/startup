@@ -40,8 +40,23 @@ async function createUser(email, password) {
   return user;
 }
 
+async function createUserStatus() {
+  const userStatus = {
+    user: email,
+    userStatus: userStatus,
+  };
+  await userCollection.insertOne(userStatus);
+
+  return userStatus;
+}
+
+// getUserList() {
+//   userCollection.
+// }
+
 module.exports = {
   getUser,
   getUserByToken,
   createUser,
+  createUserStatus,
 };
