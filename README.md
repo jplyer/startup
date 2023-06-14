@@ -48,5 +48,10 @@ React- Application ported to use the React web framework.
 * Added login placeholder js file.
 * Added status update js file. Mostly placeholder as I want to grab statuses from other users.
 * Added song list updater. Also placeholder as I'll be using node.js to update the main page from the config page.
-
+# Login Deliverable
+* Added user authentication.
+* Added login support.
+* Added logout support.
+* Added DB for user info.
+* Changed main pages to reflect what the site will be post DB Support.
 
