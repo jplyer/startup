@@ -84,7 +84,10 @@
     align-items: center;
     justify-content: center;
   }
-  
- .errorbox {
-    display: none;
- }
+ 
+ .popup {
+  display: none;
+    background-color:#f0dac2;
+    padding: 20px;
+    border: 1px solid black;
+}

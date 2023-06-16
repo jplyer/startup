@@ -6,6 +6,25 @@ async function createUser() {
   loginOrCreate(`/api/auth/create`);
 }
 
+function goodPopup() {
+  var popup = document.getElementById("loginGood");
+  popup.classList.toggle("show");
+
+}
+
+var popupLoginFail = document.getElementById("badPopup");
+function badPopup() {
+  console.log('code is funny');
+  popupLoginFail.style.display = "block";
+
+}
+
+function hideErrorPopup() {
+  popupLoginFail.style.display = "none";
+}
+
+closebuttonfail.addEventListener("click", hideErrorPopup);
+
 async function loginOrCreate(endpoint) {
   const userName = document.querySelector('#userName')?.value;
   const password = document.querySelector('#password')?.value;
@@ -20,10 +39,14 @@ async function loginOrCreate(endpoint) {
   if (response.ok) {
     localStorage.setItem('userName', userName);
     console.log('response ok')
+    window.location.href = "index.html";
+
+    
     
   } else {
     const body = await response.json();
     console.log(`⚠ Error: ${body.msg}`);
+    badPopup();
   }
 }
 
@@ -44,3 +67,4 @@ async function getUser(email) {
 
   return null;
 }
+
