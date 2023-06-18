@@ -60,6 +60,11 @@ secureApiRouter.post('/blog/:user/entry', async (req, res) => {
   res.status(200);
 });
 
+secureApiRouter.get('/bloglist', async (req, res) => {
+  const list = await DB.frontPageList;
+  res.send(list);
+})
+
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {
   const user = await DB.getUser(req.body.email);
