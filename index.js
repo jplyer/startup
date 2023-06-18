@@ -86,6 +86,12 @@ secureApiRouter.use(async (req, res, next) => {
   }
 });
 
+secureApiRouter.get('/blog/:user', async (req, res) => {
+    const user = await DB.getUser(req.params.email);
+  
+});
+
+secureApiRouter.post('blog/:user/entry');
 
 // Default error handler
 app.use(function (err, req, res, next) {

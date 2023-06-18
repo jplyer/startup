@@ -7,7 +7,8 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
-const scoreCollection = db.collection('score');
+const statusCollection = db.collection('status')
+const blogCollection = db.collection('blog')
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -20,6 +21,10 @@ const scoreCollection = db.collection('score');
 
 function getUser(email) {
   return userCollection.findOne({ email: email });
+}
+
+function getUserBlog(email) {
+  return blogCollection.findOne({ email: email });
 }
 
 function getUserByToken(token) {
@@ -40,23 +45,51 @@ async function createUser(email, password) {
   return user;
 }
 
-async function createUserStatus() {
+async function createUserStatus(email, userStatus) {
   const userStatus = {
     user: email,
     userStatus: userStatus,
   };
-  await userCollection.insertOne(userStatus);
+  await statusCollection.insertOne(userStatus);
 
   return userStatus;
 }
 
-// getUserList() {
-//   userCollection.
-// }
+async function createUserBlog(email, userStatus, userHeader){
+  const userBlog = {
+    user: email,
+    userStatus: userStatus,
+    blogHeader: userHeader,
+    userPosts: [],
+  };
+  await blogCollection.insertOne(userBlog);
+
+  return userBlog;
+}
+
+async function createBlogEntry(email, userEntry,){
+
+    const blogEntry ={
+      body: userEntry,
+    };
+
+    const userBlog = getUserBlog(email);
+    await userBlog.userPosts.push(blogEntry);
+  
+    return blogEntry
+}
+
+async function frontPageList () {
+  const blogList = blogCollection.listIndexes(email);
+  return blogList.toArray(email);
+}
 
 module.exports = {
   getUser,
+  getUserBlog,
   getUserByToken,
   createUser,
   createUserStatus,
+  createUserBlog,
+  createBlogEntry,
 };
