@@ -42,6 +42,24 @@ apiRouter.post('/auth/create', async (req, res) => {
   }
 });
 
+secureApiRouter.post('/blog/:user', async (req, res) => {
+  const user = await DB.getUserBlog(req.params.email);
+  if (await DB.getUserBlog(req.body.email)) {
+    res.status(500).send({ msg: 'Existing blog' });
+  } else {
+    const blog = await DB.createUserBlog(req.body.email, req.body.userStatus,
+      req.body.blogHeader, req.body.displayPref);
+
+      res.status(200);
+}
+});
+
+secureApiRouter.post('/blog/:user/entry', async (req, res) => {
+  const blog = await DB.getUserBlog(req.params.email);
+  DB.createBlogEntry(blog, req.body.entry);
+  res.status(200);
+});
+
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {
   const user = await DB.getUser(req.body.email);
@@ -86,10 +104,7 @@ secureApiRouter.use(async (req, res, next) => {
   }
 });
 
-secureApiRouter.get('/blog/:user', async (req, res) => {
-    const user = await DB.getUser(req.params.email);
-  
-});
+
 
 secureApiRouter.post('blog/:user/entry');
 

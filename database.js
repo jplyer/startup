@@ -23,6 +23,7 @@ function getUser(email) {
   return userCollection.findOne({ email: email });
 }
 
+
 function getUserBlog(email) {
   return blogCollection.findOne({ email: email });
 }
@@ -55,12 +56,13 @@ async function createUserStatus(email, userStatus) {
   return userStatus;
 }
 
-async function createUserBlog(email, userStatus, userHeader){
+async function createUserBlog(email, userStatus, userHeader, displayPref){
   const userBlog = {
     user: email,
     userStatus: userStatus,
     blogHeader: userHeader,
     userPosts: [],
+    display: displayPref
   };
   await blogCollection.insertOne(userBlog);
 
@@ -80,8 +82,15 @@ async function createBlogEntry(email, userEntry,){
 }
 
 async function frontPageList () {
-  const blogList = blogCollection.listIndexes(email);
-  return blogList.toArray(email);
+  const query = { display: {displayPref: true} };
+
+  const options = {
+    sort: {user: 1},
+
+    projection: { user: 1, userStatus: 0, blogHeader: 1, userPosts: 0, display: 0},
+  };
+  const blogList = blogCollection.find(query, options);
+  return blogList.toArray();
 }
 
 module.exports = {
@@ -92,4 +101,5 @@ module.exports = {
   createUserStatus,
   createUserBlog,
   createBlogEntry,
+  frontPageList,
 };
