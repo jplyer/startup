@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Blog</title>
+  </head>
+
+  <body>
+    <h1><%= blogData.BlogHeader %></h1>
+    
+    <h2><%= blogData.userStatus %></h2>
+    
+    <% blogData.userPosts.forEach((post) => { %>
+      <p><%= post %></p>
+    <% }); %>
+
+  </body>
+
+  </html>

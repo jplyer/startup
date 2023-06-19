@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const DB = require('./database.js');
 const config = require('./dbConfig.json');
+const path = require('path');
 
 const authCookieName = 'token';
 
@@ -27,6 +28,7 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // CreateAuth token for a new user
 apiRouter.post('/auth/create', async (req, res) => {
