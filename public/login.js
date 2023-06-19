@@ -39,7 +39,7 @@ async function loginOrCreate(endpoint) {
   if (response.ok) {
     localStorage.setItem('userName', userName);
     console.log('response ok')
-    window.location.href = "index.html";
+    window.location.href = "blog.html";
 
     
     

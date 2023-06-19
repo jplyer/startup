@@ -26,6 +26,8 @@ app.set('trust proxy', true);
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+app.set('view engine', 'ejs');
+
 // CreateAuth token for a new user
 apiRouter.post('/auth/create', async (req, res) => {
   if (await DB.getUser(req.body.email)) {
@@ -42,25 +44,19 @@ apiRouter.post('/auth/create', async (req, res) => {
   }
 });
 
-secureApiRouter.post('/blog/:user', async (req, res) => {
+apiRouter.get('/blog/:user', async (req, res) => {
   const user = await DB.getUserBlog(req.params.email);
-  if (await DB.getUserBlog(req.body.email)) {
-    res.status(500).send({ msg: 'Existing blog' });
-  } else {
-    const blog = await DB.createUserBlog(req.body.email, req.body.userStatus,
-      req.body.blogHeader, req.body.displayPref);
-
-      res.status(200);
-}
+  const blogData = await DB.getUserBlog();
+  res.render('blog', {userName: user, blogData: blogData});
 });
 
-secureApiRouter.post('/blog/:user/entry', async (req, res) => {
-  const blog = await DB.getUserBlog(req.params.email);
-  DB.createBlogEntry(blog, req.body.entry);
-  res.status(200);
-});
+// secureApiRouter.post('/blog/:user/:entry', async (req, res) => {
+//   const blog = await DB.getUserBlog(req.params.email);
+//   DB.createBlogEntry(blog, req.body.entry);
+//   res.status(200).send();
+// });
 
-secureApiRouter.get('/bloglist', async (req, res) => {
+secureApiRouter.use('/bloglist', async (req, res) => {
   const list = await DB.frontPageList;
   res.send(list);
 })
@@ -111,7 +107,7 @@ secureApiRouter.use(async (req, res, next) => {
 
 
 
-secureApiRouter.post('blog/:user/entry');
+//secureApiRouter.post('blog/:user/entry');
 
 // Default error handler
 app.use(function (err, req, res, next) {

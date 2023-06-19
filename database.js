@@ -7,8 +7,8 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
-const statusCollection = db.collection('status')
-const blogCollection = db.collection('blog')
+const statusCollection = db.collection('status');
+const blogCollection = db.collection('blog');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -47,13 +47,13 @@ async function createUser(email, password) {
 }
 
 async function createUserStatus(email, userStatus) {
-  const userStatus = {
+  const status = {
     user: email,
     userStatus: userStatus,
   };
-  await statusCollection.insertOne(userStatus);
+  await statusCollection.insertOne(status);
 
-  return userStatus;
+  return status;
 }
 
 async function createUserBlog(email, userStatus, userHeader, displayPref){
@@ -62,7 +62,7 @@ async function createUserBlog(email, userStatus, userHeader, displayPref){
     userStatus: userStatus,
     blogHeader: userHeader,
     userPosts: [],
-    display: displayPref
+    display: displayPref,
   };
   await blogCollection.insertOne(userBlog);
 

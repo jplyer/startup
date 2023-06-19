@@ -6,10 +6,19 @@
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="startup.css" rel="stylesheet" />
-    <title>Jack's Blog Tools</title>
+    <title><%= blogData.user %>'s Blog!</title>
     <link rel="icon" href="https://assets.pokemon.com/assets/cms2/img/pokedex/full/875.png">
   </head>
 
-  <header class="indextitle">Blog!</header>
+  <body>
+    <h1><%= blogData.BlogHeader %></h1>
+    
+    <h2><%= blogData.userStatus %></h2>
+    
+    <% blogData.userPosts.forEach((post) => { %>
+      <p><%= post %></p>
+    <% }); %>
 
-  <p> This is a Placeholder Page for now!</p>
+  </body>
+
+  </html>
