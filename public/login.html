@@ -25,9 +25,9 @@
                 <input type="password" id="password" placeholder="password!">
             </div>
             <div class="buttoncontrol">
-                <button type="button" class="btn-primary" onclick="loginUser()"><span>Login</span></button>
-                <button type="button" class="btn-primary" onclick="createUser()"><span>Register</span></button>
-                <button type="button" class="btn-secondary" onclick="logout()"><span>logout</span></button>
+                <button type="button" onclick="loginUser()"><span>Login</span></button>
+                <button type="button" onclick="createUser()"><span>Register</span></button>
+                <button type="button" onclick="logout()"><span>logout</span></button>
             </div>
           </div>
     </div>
@@ -35,9 +35,35 @@
 
   <!-- Error dialog -->
   <div class="popup" id="badPopup">
-    <p>Invalid Password</p>
+    <p>Error</p>
     <button id="closebuttonfail">Close</button>
   </div>
+  <!-- Blog Create Prompt-->
+  <div class = "popup" id = "loginGood">
+    <div id = "createOrNo">
+      <span>Success - Want to Make a Blog?</span>
+    <button type = "button" id = "makeBlog" onclick="blogCreateControl(true)">Create!</button>
+    <button type = "button" id = "noBlog" onclick="blogCreateControl(false)">Cancel</button>
+    </div>
+
+    <div id = "blogCreateFields" class = "popup">
+
+      <div class="headerInput">
+        <span>Enter A Blog Header!</span>
+        <input type = "text" id = "blogHeader" placeholder="Blog Header!">
+      </div>
+
+      <div class = "displayQ">
+        <span>Would you like to have your blog displayed on the main page?</span>
+        <button id="yesBlogDisplay" onclick="setDisplayPref(true)">Yes!</button>
+        <button id = "noBlogDisplay" onclick="setDisplayPref(false)" >No!</button>
+      </div>
+
+      <button type="button" onclick="blogCreate('/blog/:user')">Submit!</button>
+
+    </div>
+  </div>
+
 
 <script src="login.js"></script>
   </html>

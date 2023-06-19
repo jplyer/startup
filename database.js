@@ -23,11 +23,6 @@ function getUser(email) {
   return userCollection.findOne({ email: email });
 }
 
-
-function getUserBlog(email) {
-  return blogCollection.findOne({ email: email });
-}
-
 function getUserByToken(token) {
   return userCollection.findOne({ token: token });
 }
@@ -40,45 +35,38 @@ async function createUser(email, password) {
     email: email,
     password: passwordHash,
     token: uuid.v4(),
+    userStatus: userStatus,
+    blogHeader: userHeader,
+    userPosts: [],
+    display: displayPref,
   };
   await userCollection.insertOne(user);
 
   return user;
 }
 
-async function createUserStatus(email, userStatus) {
-  const status = {
-    user: email,
-    userStatus: userStatus,
-  };
-  await statusCollection.insertOne(status);
-
-  return status;
-}
-
-async function createUserBlog(email, userStatus, userHeader, displayPref){
-  const userBlog = {
-    user: email,
-    userStatus: userStatus,
-    blogHeader: userHeader,
-    userPosts: [],
-    display: displayPref,
-  };
-  await blogCollection.insertOne(userBlog);
-
-  return userBlog;
-}
-
-async function createBlogEntry(email, userEntry,){
+async function createBlogEntry(email, userEntry, headerInput, userPref){
 
     const blogEntry ={
       body: userEntry,
     };
 
-    const userBlog = getUserBlog(email);
+    const userHeader = {
+      header: headerInput,
+    };
+
+    const displayPref = {
+      display: userPref,
+    };
+
+    const userBlog = getUser(email);
+    
     await userBlog.userPosts.push(blogEntry);
-  
+    userBlog.blogHeader = userHeader;
+    userBlog.display = displayPref;
+
     return blogEntry
+
 }
 
 async function frontPageList () {
@@ -89,17 +77,14 @@ async function frontPageList () {
 
     projection: { user: 1, userStatus: 0, blogHeader: 1, userPosts: 0, display: 0},
   };
-  const blogList = blogCollection.find(query, options);
+  const blogList = userCollection.find(query, options);
   return blogList.toArray();
 }
 
 module.exports = {
   getUser,
-  getUserBlog,
   getUserByToken,
   createUser,
-  createUserStatus,
-  createUserBlog,
   createBlogEntry,
   frontPageList,
 };

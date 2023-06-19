@@ -91,3 +91,7 @@
     padding: 20px;
     border: 1px solid black;
 }
+
+.popup2 {
+  display: none;
+}

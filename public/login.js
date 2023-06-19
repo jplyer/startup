@@ -7,9 +7,9 @@ async function createUser() {
 }
 
 function goodPopup() {
-  var popup = document.getElementById("loginGood");
-  popup.classList.toggle("show");
-
+  var popupLoginTrue = document.getElementById("loginGood");
+  console.log('code is funny');
+  popupLoginTrue.style.display = "block";
 }
 
 var popupLoginFail = document.getElementById("badPopup");
@@ -39,13 +39,66 @@ async function loginOrCreate(endpoint) {
   if (response.ok) {
     localStorage.setItem('userName', userName);
     console.log('response ok')
-    window.location.href = "blog.html";
+    goodPopup();
 
     
     
   } else {
     const body = await response.json();
     console.log(`⚠ Error: ${body.msg}`);
+    badPopup();
+  }
+}
+let displayPref = false;
+async function setDisplayPref(value) {
+  if (value === true) {
+    displayPref = true;
+  } else {
+    displayPref = false;
+  }
+}
+
+async function blogCreateControl(value) {
+  if (value === true) {
+    document.getElementById('blogCreateFields').style.display = 'block';
+    document.getElementById('createOrNo').style.display = 'none';
+    console.log('true');
+  } else {
+    window.location.href = "/login.html";
+    console.log('else');
+  }
+  
+}
+
+function goToUserBlog (user) {
+  const blogUrl = '/blog/' + user;
+  window.location.href = blogUrl;
+}
+
+async function blogCreate(endpoint) {
+  const userName = localStorage.getItem('userName');
+  const headerInput = document.querySelector('#blogHeader');
+  //const username = JSON.parse(userName);
+
+  const response = await fetch(endpoint, {
+    method: 'post',
+    body: JSON.stringify({ email: userName, headerInput: headerInput, 
+      userPref: displayPref}),
+
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+
+  if (response.ok) {
+    console.log('it worked!');
+    console.log(userName);
+    //console.log(username);
+    goToUserBlog(userName);
+
+  } else {
+    const body = await response.json();
+    console.log('BAD')
     badPopup();
   }
 }
@@ -57,14 +110,4 @@ function logout() {
   }).then(() => (window.location.href = '/'));
 }
 
-async function getUser(email) {
-  let scores = [];
-  // See if we have a user with the given email.
-  const response = await fetch(`/api/user/${email}`);
-  if (response.status === 200) {
-    return response.json();
-  }
-
-  return null;
-}
 
