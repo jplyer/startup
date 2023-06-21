@@ -8,7 +8,6 @@ const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
 const statusCollection = db.collection('status');
-const blogCollection = db.collection('blog');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -35,10 +34,10 @@ async function createUser(email, password) {
     email: email,
     password: passwordHash,
     token: uuid.v4(),
-    userStatus: userStatus,
-    blogHeader: userHeader,
+    userStatus: null,
+    blogHeader: null,
     userPosts: [],
-    display: displayPref,
+    display: true,
   };
   await userCollection.insertOne(user);
 
