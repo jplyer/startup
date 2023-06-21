@@ -68,13 +68,11 @@ async function createBlogEntry(email, userEntry, headerInput, userPref){
 
 }
 
-async function frontPageList () {
-  const query = { email: {email: !null} };
+function frontPageList () {
 
-  const blogList = userCollection.find(query);
-  const testconst = await blogList.json();
-  console.log(testconst.toArray());
-  return blogList.toArray();
+  const blogList = getUser('jack');
+
+  return blogList;
   
 }
 

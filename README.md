@@ -55,3 +55,10 @@ React- Application ported to use the React web framework.
 * Added DB for user info.
 * Changed main pages to reflect what the site will be post DB Support.
 
+# DB Deliverable 
+* added a user displayed from DB onto front page
+* wanted to do all users but my code was fighting me all weekend so this is what we get
+
+# WS Deliverable
+* I can't get this to work the way I want w/o react which I can't use because my computer broke 
+* So I implemented the chat ws assignment as a feature

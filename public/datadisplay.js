@@ -4,7 +4,8 @@ async function loadBlogs() {
     try {
 
         const response = await fetch('/api/bloglist');
-        blogs = await response.json();
+        let objblogs = await response.json();
+        blogs = [objblogs];
         localStorage.setItem('blogs', JSON.stringify(blogs));
         console.log(blogs);
     
@@ -23,15 +24,14 @@ function displayBlogs(blogs) {
     if (blogs.length) {
         const ulEl = document.createElement('ul');
 
-        for (const i of blogs.entries()) {
+        for (i = 0; i < blogs.length; i++) {
             const liEl = document.createElement('li');
-            const blogItem = document.createTextNode('S{blog[0]} - $blog[1]}');
-            liEl.textContent = i + 1;
-            
-            liEl.appendChild(blogItem); 
-            ulEl.appendChild(liEL);
+            const blogItem = blogs[i].email;
+            liEl.textContent = blogItem;
+             
+            ulEl.appendChild(liEl);
         }
-        listBodyEl.appendChild(ulEL);
+        listBodyEl.appendChild(ulEl);
     }
 }
 
