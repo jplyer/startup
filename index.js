@@ -128,10 +128,11 @@ apiRouter.get('/blog/:user', async (req, res) => {
 //   res.status(200).send();
 // });
 
-// secureApiRouter.get('/bloglist', async (req, res) => {
-//   const list = await DB.frontPageList;
-//   res.send(list);
-// })
+apiRouter.get('/bloglist', async (req, res) => {
+  console.log('in endpoint');
+  const list = await DB.frontPageList();
+ res.send(list);
+})
 
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {

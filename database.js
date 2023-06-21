@@ -2,12 +2,12 @@ const { MongoClient } = require('mongodb');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
 const config = require('./dbConfig.json');
+const { json } = require('express');
 
 const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
 const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
-const statusCollection = db.collection('status');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -69,15 +69,13 @@ async function createBlogEntry(email, userEntry, headerInput, userPref){
 }
 
 async function frontPageList () {
-  const query = { display: {displayPref: true} };
+  const query = { email: {email: !null} };
 
-  const options = {
-    sort: {user: 1},
-
-    projection: { user: 1, userStatus: 0, blogHeader: 1, userPosts: 0, display: 0},
-  };
-  const blogList = userCollection.find(query, options);
+  const blogList = userCollection.find(query);
+  const testconst = await blogList.json();
+  console.log(testconst.toArray());
   return blogList.toArray();
+  
 }
 
 module.exports = {
